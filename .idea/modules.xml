@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/28_lesson_MyArray/28_lesson_MyArray.iml" filepath="$PROJECT_DIR$/28_lesson_MyArray/28_lesson_MyArray.iml" />
+      <module fileurl="file://$PROJECT_DIR$/30_lesson/30_lesson.iml" filepath="$PROJECT_DIR$/30_lesson/30_lesson.iml" />
+      <module fileurl="file://$PROJECT_DIR$/31_lesson_colllection/31_lesson_colllection.iml" filepath="$PROJECT_DIR$/31_lesson_colllection/31_lesson_colllection.iml" />
+      <module fileurl="file://$PROJECT_DIR$/32_lesson-Citizens/32_lesson-Citizens.iml" filepath="$PROJECT_DIR$/32_lesson-Citizens/32_lesson-Citizens.iml" />
+      <module fileurl="file://$PROJECT_DIR$/32_lesson_collections/32_lesson_collections.iml" filepath="$PROJECT_DIR$/32_lesson_collections/32_lesson_collections.iml" />
+      <module fileurl="file://$PROJECT_DIR$/34_lesson_setMvc/34_lesson_setMvc.iml" filepath="$PROJECT_DIR$/34_lesson_setMvc/34_lesson_setMvc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/35_lesson_Set_advanced/35_lesson_Set_advanced.iml" filepath="$PROJECT_DIR$/35_lesson_Set_advanced/35_lesson_Set_advanced.iml" />
+      <module fileurl="file://$PROJECT_DIR$/36_lesson_setAdv/36_lesson_setAdv.iml" filepath="$PROJECT_DIR$/36_lesson_setAdv/36_lesson_setAdv.iml" />
+      <module fileurl="file://$PROJECT_DIR$/37_lesson_Map_intro/37_lesson_Map_intro.iml" filepath="$PROJECT_DIR$/37_lesson_Map_intro/37_lesson_Map_intro.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TelRan3.iml" filepath="$PROJECT_DIR$/TelRan3.iml" />
+    </modules>
+  </component>
+</project>
