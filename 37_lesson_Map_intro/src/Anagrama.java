@@ -43,9 +43,19 @@ public class Anagrama {
 
     }
 
-    private static boolean isAnagram(String baseWord, String word) {
+    public static boolean isAnagram(String baseWord, String word) {
         word = word.toLowerCase();
         baseWord = baseWord.toLowerCase().trim();
+
+        if( baseWord == null || word ==null)
+            return false;
+
+        if( baseWord.isBlank()|| word.isBlank())
+            return false;
+
+        if( word.length()> baseWord.length())
+            return false;
+
 
         if( !word.matches("[a-z]+"))
             return false;
@@ -60,6 +70,11 @@ public class Anagrama {
                 return false;
             baseMap.put(ch, baseMap.get(ch)-1);
 
+        }
+        for( Character ch : word.toCharArray()){
+            int c = baseMap.getOrDefault(ch, 0);
+            if ( c == 0) return false;
+            baseMap.put(ch, c-1);
         }
 
         return true;

@@ -89,47 +89,59 @@ public class MyTree {
 
     public MyTree subSet(int from, int to) {
         MyTree newTree = new MyTree();
-        cropRecursive( root, from, to, newTree);
+        cropRecursive(root, from, to, newTree);
         return newTree;
     }
 
 
     private void cropRecursive(Node root, int from, int to, MyTree newTree) {
-        if( root == null)
+//        if( root == null)
+//            return;
+//        if(root.value < from) cropRecursive(root.right, from, to, newTree );
+//        if( root.value >= from && root.value < to){
+//            newTree.add(root.value);
+//            cropRecursive(root.left, from, to, newTree);
+//            cropRecursive(root.right, from, to, newTree);
+//        }
+//        if( root.value >=to) cropRecursive(root.left, from, to, newTree);
+//    }
+        if (root == null)
             return;
-        if(root.value < from) cropRecursive(root.right, from, to, newTree );
-        if( root.value >= from && root.value < to){
-            newTree.add(root.value);
+        if (root.value > from)
             cropRecursive(root.left, from, to, newTree);
-            cropRecursive(root.right, from, to, newTree);
-        }
-        if( root.value >=to) cropRecursive(root.left, from, to, newTree);
+        if (root.value >= from && root.value < to) newTree.add(root.value);
+        if (root.value < to) cropRecursive(root.right, from, to, newTree);
+
     }
+
 
     public void trim( int start, int end){
        trimRecursive(root, start, end);
     }
 
-    private Node trimRecursive(Node root, int start, int end) {
-        if(root == null)
-            return null;
-        if( root.value < start)  {
-            root.left = null;
-        //    trimRecursive(root.right, start, end);
+    public void trim1( int start, int end){
+        trimRecursive1(root, start, end);
+    }
 
-        }
-        if(root.value >= end) {
-            root.right=null;
-         //   trimRecursive(root.left, start, end);
-        }
+    private Node trimRecursive(Node root, int start, int end) {
+        if(root == null) return null;
+        if( root.value < start)   root.left = null;
+        if(root.value >= end)  root.right=null;
         root. left = trimRecursive(root.left, start, end);
         root.right = trimRecursive(root.right, start, end);
-
 
         if(root.value < start || root.value >= end)
             root = removeRecursive(root, root.value);
 
+        return root;
+    }
 
+    private Node trimRecursive1( Node root, int start, int end){
+        if(root == null) return null;
+        if(root.value < start) return trimRecursive1(root.right, start, end);
+        if(root.value > end) return trimRecursive1(root.left, start, end);
+        root.left = trimRecursive1(root.left, start, end);
+        root.right = trimRecursive1(root.right, start, end);
         return root;
     }
 

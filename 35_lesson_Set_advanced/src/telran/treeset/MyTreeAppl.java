@@ -41,11 +41,14 @@ public class MyTreeAppl {
         newTree.traverse();
 
 
+
         System.out.println("\n==========Trim myTree");
         tree.traverse();
         System.out.println();
-        tree.trim(2,11);
+        tree.trim1(4,16);
         tree.traverse();
+
+
 
 
     }
